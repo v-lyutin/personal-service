@@ -12,7 +12,7 @@ public interface CorporateMailUseCase {
 
     CorporateMailResponse updateCorporateMail(UUID corporateMailId, CorporateMailUpdateRequest request);
 
-    void deleteCorporateMail(UUID corporateMailId);
+    void deleteCorporateMailById(UUID corporateMailId);
 
     Set<CorporateMailResponse> getCorporateMailsByEmployee(UUID employeeId);
 }

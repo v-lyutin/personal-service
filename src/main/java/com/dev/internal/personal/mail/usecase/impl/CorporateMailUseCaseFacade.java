@@ -43,7 +43,7 @@ public class CorporateMailUseCaseFacade implements CorporateMailUseCase {
     }
 
     @Override
-    public void deleteCorporateMail(UUID corporateMailId) {
+    public void deleteCorporateMailById(UUID corporateMailId) {
         corporateMailService.deleteCorporateMailById(corporateMailId);
     }
 

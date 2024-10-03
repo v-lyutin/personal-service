@@ -2,6 +2,7 @@ package com.dev.internal.personal.employee.model;
 
 import com.dev.internal.personal.employee.model.enums.Gender;
 import com.dev.internal.personal.mail.model.CorporateMail;
+import com.dev.internal.personal.note.model.Note;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -51,6 +52,11 @@ public class Employee {
 
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Set<CorporateMail> corporateMails = new HashSet<>();
+
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private Set<Note> notes = new HashSet<>();
 }

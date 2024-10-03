@@ -8,3 +8,6 @@ databaseChangeLog:
   - include:
       file: 0.0.1/changelog-create-corporate_mails-table.sql
       relativeToChangelogFile: true
+  - include:
+      file: 0.0.1/changelog-create-notes-table.sql
+      relativeToChangelogFile: true

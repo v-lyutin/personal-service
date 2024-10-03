@@ -37,7 +37,7 @@ public class CorporateMailController {
     }
 
     @DeleteMapping(value = "corporate-mails/{corporateMailId}")
-    public void deleteCorporateMail(@PathVariable(name = "corporateMailId") UUID corporateMailId) {
-        corporateMailUseCase.deleteCorporateMail(corporateMailId);
+    public void deleteCorporateMailById(@PathVariable(name = "corporateMailId") UUID corporateMailId) {
+        corporateMailUseCase.deleteCorporateMailById(corporateMailId);
     }
 }
