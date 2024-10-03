@@ -2,8 +2,8 @@ package com.dev.internal.personal.mail.mapper.impl;
 
 import com.dev.internal.personal.mail.mapper.CorporateMailMapper;
 import com.dev.internal.personal.mail.model.CorporateMail;
-import com.dev.internal.personal.mail.web.dto.request.CorporateMailCreateRequest;
-import com.dev.internal.personal.mail.web.dto.response.CorporateMailResponse;
+import com.dev.internal.personal.mail.model.dto.request.CorporateMailCreateRequest;
+import com.dev.internal.personal.mail.model.dto.response.CorporateMailResponse;
 import com.dev.internal.personal.employee.model.Employee;
 import org.springframework.stereotype.Component;
 

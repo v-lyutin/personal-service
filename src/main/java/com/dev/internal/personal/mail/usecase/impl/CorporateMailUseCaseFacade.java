@@ -2,13 +2,13 @@ package com.dev.internal.personal.mail.usecase.impl;
 
 import com.dev.internal.personal.employee.service.EmployeeService;
 import com.dev.internal.personal.mail.usecase.CorporateMailUseCase;
-import com.dev.internal.personal.mail.web.dto.request.CorporateMailUpdateRequest;
+import com.dev.internal.personal.mail.model.dto.request.CorporateMailUpdateRequest;
 import com.dev.internal.personal.mail.mapper.CorporateMailMapper;
 import com.dev.internal.personal.mail.model.CorporateMail;
 import com.dev.internal.personal.employee.model.Employee;
 import com.dev.internal.personal.mail.service.CorporateMailService;
-import com.dev.internal.personal.mail.web.dto.request.CorporateMailCreateRequest;
-import com.dev.internal.personal.mail.web.dto.response.CorporateMailResponse;
+import com.dev.internal.personal.mail.model.dto.request.CorporateMailCreateRequest;
+import com.dev.internal.personal.mail.model.dto.response.CorporateMailResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

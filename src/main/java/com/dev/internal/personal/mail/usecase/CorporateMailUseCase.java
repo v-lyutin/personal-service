@@ -1,8 +1,8 @@
 package com.dev.internal.personal.mail.usecase;
 
-import com.dev.internal.personal.mail.web.dto.request.CorporateMailCreateRequest;
-import com.dev.internal.personal.mail.web.dto.request.CorporateMailUpdateRequest;
-import com.dev.internal.personal.mail.web.dto.response.CorporateMailResponse;
+import com.dev.internal.personal.mail.model.dto.request.CorporateMailCreateRequest;
+import com.dev.internal.personal.mail.model.dto.request.CorporateMailUpdateRequest;
+import com.dev.internal.personal.mail.model.dto.response.CorporateMailResponse;
 
 import java.util.Set;
 import java.util.UUID;

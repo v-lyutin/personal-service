@@ -1,4 +1,4 @@
-package com.dev.internal.personal.mail.web.dto.response;
+package com.dev.internal.personal.mail.model.dto.response;
 
 import java.util.UUID;
 

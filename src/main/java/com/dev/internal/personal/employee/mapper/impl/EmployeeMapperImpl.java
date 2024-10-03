@@ -3,9 +3,9 @@ package com.dev.internal.personal.employee.mapper.impl;
 import com.dev.internal.common.mapper.JsonNullableMapper;
 import com.dev.internal.personal.employee.mapper.EmployeeMapper;
 import com.dev.internal.personal.employee.model.Employee;
-import com.dev.internal.personal.employee.web.dto.request.EmployeeCreateRequest;
-import com.dev.internal.personal.employee.web.dto.request.EmployeeUpdateRequest;
-import com.dev.internal.personal.employee.web.dto.response.EmployeeResponse;
+import com.dev.internal.personal.employee.model.dto.request.EmployeeCreateRequest;
+import com.dev.internal.personal.employee.model.dto.request.EmployeeUpdateRequest;
+import com.dev.internal.personal.employee.model.dto.response.EmployeeResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

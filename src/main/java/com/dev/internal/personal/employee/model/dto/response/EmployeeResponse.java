@@ -1,4 +1,4 @@
-package com.dev.internal.personal.employee.web.dto.response;
+package com.dev.internal.personal.employee.model.dto.response;
 
 import com.dev.internal.personal.employee.model.enums.Gender;
 import com.fasterxml.jackson.annotation.JsonFormat;

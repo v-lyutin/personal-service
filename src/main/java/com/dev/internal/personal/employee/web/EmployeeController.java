@@ -1,9 +1,9 @@
 package com.dev.internal.personal.employee.web;
 
 import com.dev.internal.personal.employee.usecase.EmployeeUseCase;
-import com.dev.internal.personal.employee.web.dto.request.EmployeeCreateRequest;
-import com.dev.internal.personal.employee.web.dto.request.EmployeeUpdateRequest;
-import com.dev.internal.personal.employee.web.dto.response.EmployeeResponse;
+import com.dev.internal.personal.employee.model.dto.request.EmployeeCreateRequest;
+import com.dev.internal.personal.employee.model.dto.request.EmployeeUpdateRequest;
+import com.dev.internal.personal.employee.model.dto.response.EmployeeResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

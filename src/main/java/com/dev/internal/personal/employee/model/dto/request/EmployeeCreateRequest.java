@@ -1,4 +1,4 @@
-package com.dev.internal.personal.employee.web.dto.request;
+package com.dev.internal.personal.employee.model.dto.request;
 
 import com.dev.internal.personal.employee.model.enums.Gender;
 import com.dev.internal.personal.employee.util.GenderDeserializer;
