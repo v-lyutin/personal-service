@@ -24,8 +24,8 @@ public class EmployeeController {
     }
 
     @GetMapping(value = "{employeeId}")
-    public EmployeeResponse getEmployee(@PathVariable(name = "employeeId") UUID employeeId) {
-        return employeeUseCase.getEmployee(employeeId);
+    public EmployeeResponse getEmployeeById(@PathVariable(name = "employeeId") UUID employeeId) {
+        return employeeUseCase.getEmployeeById(employeeId);
     }
 
     @PatchMapping(value = "{employeeId}")

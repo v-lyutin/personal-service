@@ -13,5 +13,5 @@ public interface EmployeeUseCase {
 
     EmployeeResponse dismissEmployee(UUID employeeId);
 
-    EmployeeResponse getEmployee(UUID employeeId);
+    EmployeeResponse getEmployeeById(UUID employeeId);
 }

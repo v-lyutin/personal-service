@@ -39,7 +39,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeRepository.findById(employeeId)
                 .orElseThrow(() -> new ServiceException(
                         HttpStatus.NOT_FOUND,
-                        String.format("Employee with ID '%d' not found.", employeeId)
+                        String.format("Employee with ID '%s' not found.", employeeId)
                 ));
     }
 }

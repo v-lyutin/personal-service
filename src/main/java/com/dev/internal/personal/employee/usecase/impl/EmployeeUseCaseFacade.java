@@ -37,7 +37,7 @@ public class EmployeeUseCaseFacade implements EmployeeUseCase {
     }
 
     @Override
-    public EmployeeResponse getEmployee(UUID employeeId) {
+    public EmployeeResponse getEmployeeById(UUID employeeId) {
         return employeeMapper.toEmployeeResponse(employeeService.getEmployeeById(employeeId));
     }
 }
