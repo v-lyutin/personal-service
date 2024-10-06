@@ -19,6 +19,12 @@ public class TeamServiceImpl implements TeamService {
 
     @Override
     public Team createTeam(Team team) {
+        if (!team.getDepartment().getIsActive()) {
+            throw new ServiceException(
+                    HttpStatus.BAD_REQUEST,
+                    "Department is not active"
+            );
+        }
         return teamRepository.save(team);
     }
 
