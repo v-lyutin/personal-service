@@ -1,11 +1,9 @@
-package com.dev.internal.personal.department.model;
+package com.dev.internal.personal.team.model;
 
-import com.dev.internal.personal.team.model.Team;
+import com.dev.internal.personal.department.model.Department;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.HashSet;
-import java.util.Set;
 import java.util.UUID;
 
 @Data
@@ -13,8 +11,8 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(schema = "personal", name = "departments")
-public class Department {
+@Table(schema = "personal", name = "teams")
+public class Team {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
@@ -29,6 +27,7 @@ public class Department {
 
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private Set<Team> teams = new HashSet<>();
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "department_id")
+    private Department department;
 }

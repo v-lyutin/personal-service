@@ -41,7 +41,7 @@ public class EmployeeMapperImpl implements EmployeeMapper {
                 employee.getCountryOfResidence(),
                 employee.getRegionOfResidence(),
                 employee.getContacts(),
-                employee.isDismissed(),
+                employee.getIsDismissed(),
                 employee.getDateOfDismissal()
         );
     }

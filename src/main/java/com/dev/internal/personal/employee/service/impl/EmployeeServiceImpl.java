@@ -29,7 +29,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee dismissEmployeeById(UUID employeeId) {
         Employee employee = getEmployeeById(employeeId);
-        employee.setDismissed(true);
+        employee.setIsDismissed(true);
         employee.setDateOfDismissal(LocalDate.now());
         return employeeRepository.save(employee);
     }

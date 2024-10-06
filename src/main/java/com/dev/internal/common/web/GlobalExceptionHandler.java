@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
-public class ErrorHandler {
+public class GlobalExceptionHandler {
     @ExceptionHandler(ServiceException.class)
     public ProblemDetail handleServiceException(ServiceException exception) {
         return ProblemDetail.forStatusAndDetail(exception.getHttpStatus(), exception.getMessage());
@@ -26,8 +26,13 @@ public class ErrorHandler {
         return ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, errorMessage);
     }
 
-    @ExceptionHandler(RuntimeException.class)
-    public ProblemDetail handleRuntimeException(RuntimeException exception) {
-        return ProblemDetail.forStatusAndDetail(HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage());
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ProblemDetail handleIllegalArgument(IllegalArgumentException exception) {
+        return ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, exception.getMessage());
     }
+
+//    @ExceptionHandler(RuntimeException.class)
+//    public ProblemDetail handleRuntimeException(RuntimeException exception) {
+//        return ProblemDetail.forStatusAndDetail(HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage());
+//    }
 }

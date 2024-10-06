@@ -43,7 +43,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public Department archiveDepartment(Department department) {
-        department.setActive(false);
+        department.setIsActive(false);
         return departmentRepository.save(department);
     }
 

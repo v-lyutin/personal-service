@@ -46,7 +46,7 @@ public class Employee {
     private String contacts;
 
     @Column(nullable = false)
-    private boolean isDismissed;
+    private Boolean isDismissed;
 
     private LocalDate dateOfDismissal;
 

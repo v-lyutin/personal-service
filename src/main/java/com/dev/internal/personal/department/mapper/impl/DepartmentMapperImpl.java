@@ -29,7 +29,7 @@ public class DepartmentMapperImpl implements DepartmentMapper {
                 department.getId(),
                 department.getDisplayName(),
                 department.getDescription(),
-                department.isActive()
+                department.getIsActive()
         );
     }
 
