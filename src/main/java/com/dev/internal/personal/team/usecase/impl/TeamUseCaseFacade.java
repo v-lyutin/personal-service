@@ -34,7 +34,7 @@ public class TeamUseCaseFacade implements TeamUseCase {
     public TeamResponse patchTeam(UUID teamId, TeamUpdateRequest request) {
         Team team = teamService.getTeamById(teamId);
         team = teamMapper.patch(team, request);
-        return teamMapper.toTeamResponse(team);
+        return teamMapper.toTeamResponse(teamService.updateTeam(team));
     }
 
     @Override

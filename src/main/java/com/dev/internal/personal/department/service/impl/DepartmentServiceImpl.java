@@ -4,6 +4,8 @@ import com.dev.internal.common.exception.ServiceException;
 import com.dev.internal.personal.department.model.Department;
 import com.dev.internal.personal.department.repository.DepartmentRepository;
 import com.dev.internal.personal.department.service.DepartmentService;
+import com.dev.internal.personal.team.model.Team;
+import com.dev.internal.personal.team.service.TeamService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class DepartmentServiceImpl implements DepartmentService {
     private final DepartmentRepository departmentRepository;
+    private final TeamService teamService;
 
     @Override
     public Department createDepartment(Department department) {
@@ -44,6 +47,9 @@ public class DepartmentServiceImpl implements DepartmentService {
     @Override
     public Department archiveDepartment(Department department) {
         department.setIsActive(false);
+        department.getTeams().stream()
+                .filter(Team::getIsActive)
+                .forEach(teamService::archiveTeam);
         return departmentRepository.save(department);
     }
 
